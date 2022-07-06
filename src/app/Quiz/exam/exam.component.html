@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let exam of exams">
+            <div class="card">
+                <img [src]="exam.imageUrl" class="card-img-top" height="250" [alt]="exam.name">
+                <div class="card-body">
+                  <h5 class="card-title">{{ exam.name }}</h5>
+                  <p class="card-text">
+                    {{exam.description}}
+                  </p>
+                  <a [routerLink]="['/exam-details', exam.id]" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

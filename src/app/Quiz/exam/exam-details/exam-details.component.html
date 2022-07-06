@@ -1,0 +1,10 @@
+<div class="jumbotron" style="border-radius: 0">
+    <div class="container">
+        <h1 class="display-4">{{ examDetails.exam.name }}</h1>
+        <p class="lead">{{ examDetails.exam.description }}</p>
+        <hr class="my-4">
+        <p>Total number of Question: {{ examDetails.totalQuestions }} Questions</p>
+        <p>Total Degree: {{ examDetails.totalDegree }}</p>
+        <a class="btn btn-primary btn-lg" [routerLink]="['/start-exam', examDetails.exam.id]" role="button">Let's Start</a>
+    </div>
+</div>
